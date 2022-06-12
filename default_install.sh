@@ -63,7 +63,7 @@ echo "Change directory rights from root to pzuser"
 echo " "
 
 echo "==== Installing Project Zomboid Server as pzuser ===="
-su pzuser -c 'cd /home/pzuser; wget https://raw.githubusercontent.com/fspxnky/PZ-Server-Script/main/update_zomboid.txt; steamcmd +runscript update_zomboid.txt'
+su pzuser -c 'cd /home/pzuser; wget https://raw.githubusercontent.com/fspxnky/PZ-Server-Script/main/update_zomboid.txt; steamcmd +runscript /home/pzuser/update_zomboid.txt'
 echo "Installation Complete!"; sleep 2
 echo " "
 
