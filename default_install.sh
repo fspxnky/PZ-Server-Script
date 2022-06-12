@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Start of Script 
+
 # Check if its run by root
 # If not, exit the script
 if [[ $EUID -ne 0 ]]; then
@@ -32,6 +34,7 @@ then
         echo "Installing packages and steamCMD."
         dpkg --add-architecture i386
         apt update; apt install steamcmd -y
+        echo "Done!"; sleep 2
         echo " "
 else
         echo "Sorry man, your system is not 64 bit ..."
@@ -48,6 +51,7 @@ echo "If you are hosting this server publicly, please use a stronger password."
 echo "Please enter a password for pzuser"
 read -p "Password: " password
 chpasswd <<< "pzuser:$password"
+echo "Account creation, done!"; sleep 1
 echo " "
 
 echo "==== Creating server directory ===="
@@ -64,6 +68,7 @@ echo " "
 
 echo "==== Installing Project Zomboid Server as pzuser ===="
 su pzuser -c 'cd /home/pzuser; wget https://raw.githubusercontent.com/fspxnky/PZ-Server-Script/main/update_zomboid.txt; steamcmd +runscript /home/pzuser/update_zomboid.txt'
+echo " " 
 echo "Installation Complete!"; sleep 2
 echo " "
 
@@ -79,3 +84,5 @@ echo ""
 echo "HAPPY SURVIVING WITH YOUR FRIENDS OR ... ALONE!"
 echo "Press enter to exit ...."
 read
+
+# End of Script 
