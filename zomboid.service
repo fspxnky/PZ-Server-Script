@@ -6,7 +6,7 @@ After=network.target
 PrivateTmp=true
 Type=simple
 User=pzuser
-WorkingDirectory=/opt/pzuser
+WorkingDirectory=/opt/pzserver
 ExecStart=/opt/pzserver/start-server.sh
 
 [Install]
