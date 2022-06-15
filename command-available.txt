@@ -1,0 +1,14 @@
+# Start a server
+systemctl start zomboid.service
+
+# Stop a server
+systemctl stop zomboid.service
+
+# Restart a server
+systemctl restart zomboid.service
+
+# Enable a server (To make it run automatically after a reboot)
+systemctl enable zomboid.service
+
+# Disable a server (To disable the enable service)
+systemctl disable zomboid.service
